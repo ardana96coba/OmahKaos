@@ -6,12 +6,12 @@
             </div>
 
             <div class="body">
-            <?php echo form_open('masuk/masuk_update/'.$masuk['masuk_id']); ?>
+            <?php echo form_open('keluar/keluar_update/'.$keluar['keluar_id']); ?>
 
               <!--   <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="text" name="masuk_id" id="masuk_id" required="required" value="<?php echo $masuk['masuk_id'];  ?>" class="form-control" readonly>
-                            <label class="form-label">ID masuk</label>
+                            <input type="text" name="keluar_id" id="keluar_id" required="required" value="<?php echo $keluar['keluar_id'];  ?>" class="form-control" readonly>
+                            <label class="form-label">ID keluar</label>
                         </div>
                     </div> -->
                     
@@ -24,7 +24,7 @@
                                 foreach($baju_view as $row)
                                 {
                                   $selected = "";
-                                  if($row->baju_id == $masuk['baju_id'])
+                                  if($row->baju_id == $keluar['baju_id'])
                                     $selected = 'selected="selected"';
 
                                   echo "<option value='".$row->baju_id."' $selected> &nbsp; &nbsp;" .$row->motif_nama.' - '.$row->warna_nama.'</option>';
@@ -43,7 +43,7 @@
                                 foreach($size_view as $row)
                                 {
                                   $selected = "";
-                                  if($row->size_id == $masuk['size_id'])
+                                  if($row->size_id == $keluar['size_id'])
                                     $selected = 'selected="selected"';
 
                                   echo "<option value='".$row->size_id."' $selected> &nbsp; &nbsp;" .$row->size_nama.'</option>';
@@ -53,12 +53,47 @@
                     </div>
                 </div>
 
+                <div class="form-group form-float">
+                    <label>Status</label>
+                    <div class="demo-radio-button">
+
+                         <?php if ($keluar['pending'] == "Y") { ?>
+                        <input name="pending" type="radio" id="pending_1" value="Y" checked />
+                        <label for="pending_1">Pending</label>
+                        <input name="pending" type="radio" id="pending_2" value="T"/>
+                        <label for="pending_2">Tidak</label>
+                        <?php }else { ?>
+
+                        <input name="pending" type="radio" id="pending_1" value="Y" />
+                        <label for="pending_1">Pending</label>
+                        <input name="pending" type="radio" id="pending_2" value="T" checked />
+                        <label for="pending_2">Tidak</label>
+                    <?php }?>
+
+                        
+                    </div>
+                    
+                </div>
+
                  <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="number" name="masuk_jumlah" id="masuk_jumlah" required="required" class="form-control" value="<?php echo $masuk['masuk_jumlah'];  ?>">
+                            <input type="number" name="keluar_jumlah" id="keluar_jumlah" required="required" class="form-control" value="<?php echo $keluar['keluar_jumlah'];  ?>">
                             <label class="form-label">JUMLAH</label>
                         </div>
                     </div>
+
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" name="keluar_buyer" id="keluar_buyer" required="required" class="form-control" value="<?php echo $keluar['keluar_buyer'] ?>">
+                            <label class="form-label">BUYER</label>
+                        </div>
+                    </div>
+
+
+
+                <a href="<?= site_url('keluar'); ?>" 
+                                       class="btn btn-danger waves-effect btn-xs">
+                                       <i class="material-icons">close</i></a>
 
                 
                 <button class="btn btn-primary waves-effect" type="submit">Update</button>
