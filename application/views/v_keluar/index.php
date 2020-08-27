@@ -104,6 +104,15 @@
                         </div>
                     </div>
 
+                    <div class="form-group form-float">
+                        <div class="demo-radio-button">
+                            <input name="pending" type="radio" id="radio_1" value="Y"checked />
+                            <label for="radio_1">Pending</label>
+                            <input name="pending" type="radio" id="radio_2" valie="T"/>
+                            <label for="radio_2">Tidak</label>
+                            
+                        </div>
+                    </div>
 
 
                    
