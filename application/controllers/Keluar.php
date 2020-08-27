@@ -57,7 +57,9 @@ class Keluar extends CI_Controller {
 						'keluar_jumlah'=>$this->input->post('keluar_jumlah'),
 						'admin_nama'=>$this->sesnama,
 						'keluar_tanggal' => $tgl,
-						'keluar_tanggal_edit' => $tgl_edit
+						'keluar_tanggal_edit' => $tgl_edit,
+						'pending' => $this->input->post('pending'),
+						'keluar_buyer' => $this->input->post('keluar_buyer')
 						
 				);
 
@@ -95,7 +97,9 @@ class Keluar extends CI_Controller {
 			'size_id'=>$this->input->post('size_id'),
 			'keluar_jumlah'=>$this->input->post('keluar_jumlah'),
 			'admin_nama'=>$this->sesnama,
-			'keluar_tanggal_edit' => $tgl_edit
+			'keluar_tanggal_edit' => $tgl_edit,
+			'pending' => $this->input->post('pending'),
+			'keluar_buyer' => $this->input->post('keluar_buyer')
 
 			);
 

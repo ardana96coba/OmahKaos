@@ -49,7 +49,7 @@
                                     <a href="<?= site_url('keluar/keluar_delete/'.$row->keluar_id); ?>" 
                                        class="btn btn-danger waves-effect btn-xs" 
                                        onclick="return confirm('Apakah Anda Yakin Menghapus?')">
-                                       <i class="material-icons">close</i></a>
+                                       <i class="material-icons">delete</i></a>
 
                                      
                                 </td>              
@@ -104,17 +104,25 @@
                         </div>
                     </div>
 
+
+
                     <div class="form-group form-float">
+                        <label>Status</label>
                         <div class="demo-radio-button">
-                            <input name="pending" type="radio" id="radio_1" value="Y"checked />
-                            <label for="radio_1">Pending</label>
-                            <input name="pending" type="radio" id="radio_2" valie="T"/>
-                            <label for="radio_2">Tidak</label>
+                            <input name="pending" type="radio" id="pending_1" value="Y" />
+                            <label for="pending_1">Pending</label>
+                            <input name="pending" type="radio" id="pending_2" value="T"/>
+                            <label for="pending_2">Tidak</label>
                             
                         </div>
                     </div>
 
-
+                    <div class="form-group form-float">
+                        <div class="form-line">
+                            <input type="text" name="keluar_buyer" id="keluar_buyer" required="required" class="form-control">
+                            <label class="form-label">BUYER</label>
+                        </div>
+                    </div>
                    
                     
                   
