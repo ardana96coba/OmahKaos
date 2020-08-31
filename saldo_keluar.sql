@@ -1,13 +1,13 @@
 SELECT
-  m.baju_id   AS baju_id,
+  k.baju_id   AS baju_id,
   w.warna_nama AS Warna,
   mf.motif_nama AS motif,
   -- a.baju_nama AS baju_nama,
-  m.size_id       AS size_id,
-  IF(m.masuk_jumlah IS NULL,0,SUM(m.masuk_jumlah)) AS masuk
-FROM masuk m
+  k.size_id       AS size_id,
+  IF(k.keluar_jumlah IS NULL,0,SUM(k.keluar_jumlah)) AS keluar
+FROM keluar k
    LEFT JOIN baju b
-     ON (b.baju_id = m.baju_id)
+     ON (b.baju_id = k.baju_id)
 
 LEFT JOIN motif mf
 ON (b.motif_id = mf.motif_id)
@@ -15,4 +15,5 @@ ON (b.motif_id = mf.motif_id)
 LEFT JOIN warna w
 ON (b.warna_id = w.warna_id)
 
-GROUP BY m.baju_id,m.size_id
+GROUP BY b.baju_id,k.size_id
+
