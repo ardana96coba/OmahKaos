@@ -138,5 +138,6 @@ $autoload['model'] = array('Login_model',
 						   'Kategori_model',
 						   'Baju_model',
 						   'Masuk_model',
-						   'Keluar_model'
+						   'Keluar_model',
+						   'Total_model'
 						   );

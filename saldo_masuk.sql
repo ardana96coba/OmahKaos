@@ -1,6 +1,7 @@
 SELECT
   m.baju_id   AS baju_id,
-  w.warna_nama AS Warna,
+  b.baju_photo AS baju_photo,
+  w.warna_nama AS warna,
   mf.motif_nama AS motif,
   -- a.baju_nama AS baju_nama,
   m.size_id       AS size_id,
