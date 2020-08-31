@@ -60,9 +60,9 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url(); ?>laporan">
+                        <a href="<?php echo base_url(); ?>total">
                             <i class="material-icons">assignment</i>
-                            <span>LAPORAN</span>
+                            <span>TOTAL SALDO</span>
                         </a>
                     </li>
 
