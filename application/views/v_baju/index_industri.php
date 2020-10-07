@@ -7,7 +7,7 @@
 
             <div class="header">
                 <button type="button" class="btn btn-primary waves-effect" data-toggle="modal" data-target="#defaultModal">
-                    <i class="material-icons">add</i><span>Tambah</span>
+                    <i class="material-icons">add</i><span>Tambah Baju</span>
                 </button>
 
                 <!-- <a href="<?php //echo site_url('laporan/cetak_baju_industri/' ); ?>" class="btn btn-danger waves-effect">
@@ -87,7 +87,7 @@
                     <div class="form-group form-float">
                         <div class="form-line">
                             <select name="motif_id" id="motif_id" required="required" class="form-control show-tick" data-live-search="true">
-                                <option value="">-- PILIH MOTIF --</option>
+                                <option value="">-- PILIH MOTIF Baju --</option>
                                 <?php foreach ($motif_view as $row) {  ?>
                                 <option value="<?= $row->motif_id ?>"><?= $row->motif_nama ?></option>
                               <?php } ?>
