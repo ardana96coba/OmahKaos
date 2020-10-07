@@ -23,9 +23,9 @@
                             <tr>
                                 <th>NO</th>
                                 <th>NAMA BAJU</th>
-                                <th>MOTIF</th>
-                                <th>WARNA</th>
-                                <th>PHOTO</th>
+                                <th>MOTIF BAJU</th>
+                                <th>WARNA BAJU</th>
+                                <th>PHOTO BAJU</th>
                                 
                                 <th>AKSI</th>            
                             </tr>
