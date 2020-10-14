@@ -1,13 +1,13 @@
 $(function () {
     //CKEditor
-    CKEDITOR.replace('ckeditor');
-    CKEDITOR.config.height = 300;
+    // CKEDITOR.replace('ckeditor');
+    // CKEDITOR.config.height = 300;
 
     //TinyMCE
     tinymce.init({
         selector: "textarea#tinymce",
         theme: "modern",
-        height: 300,
+        height: 200,
         plugins: [
             'advlist autolink lists link image charmap print preview hr anchor pagebreak',
             'searchreplace wordcount visualblocks visualchars code fullscreen',
@@ -19,5 +19,5 @@ $(function () {
         image_advtab: true
     });
     tinymce.suffix = ".min";
-    tinyMCE.baseURL = '../../plugins/tinymce';
+    tinyMCE.baseURL = 'http://localhost/oka/design/plugins/tinymce';
 });

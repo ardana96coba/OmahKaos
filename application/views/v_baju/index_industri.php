@@ -23,9 +23,9 @@
                             <tr>
                                 <th>NO</th>
                                 <th>NAMA BAJU</th>
-                                <th>MOTIF</th>
-                                <th>WARNA</th>
-                                <th>PHOTO</th>
+                                <th>MOTIF BAJU</th>
+                                <th>WARNA BAJU</th>
+                                <th>PHOTO BAJU</th>
                                 
                                 <th>AKSI</th>            
                             </tr>
@@ -106,7 +106,11 @@
                         </div>
                     </div>
 
-
+                    <div class="body">
+                            <textarea id="tinymce" name="baju_keterangan">
+                               
+                            </textarea>
+                        </div>
                     <div class="form-group form-float">
                         <div class="form-line">
                             <select name="baju_jenis" id="baju_jenis" required="required" class="form-control show-tick">

@@ -67,6 +67,13 @@
                     </li>
 
                     <li>
+                        <a href="<?php echo base_url(); ?>stok">
+                            <i class="material-icons">assignment</i>
+                            <span>Stock</span>
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="<?php echo base_url(); ?>pembayaran">
                             <i class="material-icons">attach_money</i>
                             <span>PEMBAYARAN</span>

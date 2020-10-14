@@ -95,10 +95,19 @@
 
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="number" name="baju_harga" id="baju_harga" required="required" class="form-control" value="<?php echo $baju['baju_harga'];  ?>">
+                            <input type="number" name="baju_harga" id="baju_harga"  class="form-control" value="<?php echo $baju['baju_harga'];  ?>" required="required">
                             <label class="form-label">HARGA BAJU</label>
                         </div>
                     </div>
+
+                    
+                    
+                    <div class="body">
+                            <textarea id="tinymce" name="baju_keterangan" >
+                                                           
+                                <?php echo $baju['baju_keterangan'];  ?>
+                            </textarea>
+                        </div>
 
                
 
