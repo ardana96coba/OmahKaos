@@ -106,7 +106,11 @@
                         </div>
                     </div>
 
-
+                    <div class="body">
+                            <textarea id="tinymce" name="baju_keterangan">
+                               
+                            </textarea>
+                        </div>
                     <div class="form-group form-float">
                         <div class="form-line">
                             <select name="baju_jenis" id="baju_jenis" required="required" class="form-control show-tick">

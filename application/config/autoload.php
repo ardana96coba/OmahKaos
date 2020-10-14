@@ -139,5 +139,6 @@ $autoload['model'] = array('Login_model',
 						   'Baju_model',
 						   'Masuk_model',
 						   'Keluar_model',
-						   'Total_model'
+						   'Total_model',
+						   'Stok_model'
 						   );

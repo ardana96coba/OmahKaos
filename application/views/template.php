@@ -112,7 +112,8 @@
     </div>
     </section>
    
-
+ <!-- TinyMCE -->
+    <script src="<?php echo base_url(); ?>design/plugins/tinymce/tinymce.js"></script>
   <!-- Jquery Core Js -->
     <script src="<?php echo base_url(); ?>design/plugins/jquery/jquery.min.js"></script>
 
@@ -141,6 +142,8 @@
 
     <!-- Custom Js -->
     <script src="<?php echo base_url(); ?>design/js/admin.js"></script>
+
+    <script src="<?php echo base_url(); ?>design/js/pages/forms/editors.js"></script>
     <script src="<?php echo base_url(); ?>design/js/pages/tables/jquery-datatable.js"></script>
     <script src="<?php echo base_url(); ?>design/js/pages/forms/form-validation.js"></script>
     <script src="<?php echo base_url(); ?>design/js/pages/forms/basic-form-elements.js"></script>
@@ -200,6 +203,8 @@
       <!-- Morris Plugin Js -->
     <script src="<?php echo base_url(); ?>design/plugins/raphael/raphael.min.js"></script>
     <script src="<?php echo base_url(); ?>design/plugins/morrisjs/morris.js"></script>
+
+
 
 
 </body>

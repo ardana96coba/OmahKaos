@@ -80,6 +80,7 @@ class Baju extends CI_Controller {
 						'baju_genre'=>$this->input->post('baju_genre'),
 						'baju_jenis'=>$this->input->post('baju_jenis'),
 						'baju_harga'=>$this->input->post('baju_harga'),
+						'baju_keterangan'=>$this->input->post('baju_keterangan'),
 						'baju_photo' => $gbr['file_name']
 				);
 
@@ -119,6 +120,7 @@ class Baju extends CI_Controller {
 			'baju_genre'=>$this->input->post('baju_genre'),
 			'baju_jenis'=>$this->input->post('baju_jenis'),
 			'baju_harga'=>$this->input->post('baju_harga'),
+			'baju_keterangan'=>$this->input->post('baju_keterangan')
 
 			);
 
