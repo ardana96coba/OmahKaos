@@ -67,7 +67,7 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo base_url(); ?>stok">
+                        <a href="<?php echo base_url(); ?>stok/index/5">
                             <i class="material-icons">assignment</i>
                             <span>Stock</span>
                         </a>

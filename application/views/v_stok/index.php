@@ -1,4 +1,62 @@
 <div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2><?= strtoupper($judul)?></h2>
+            </div>
+
+            <div class="body">
+            <?php echo form_open('stok/view/'); ?>
+
+            
+                    
+                <label class="form-label">BAJU</label>
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <select name="baju_id" id="baju_id"  class="form-control show-tick" data-live-search="true">
+                            <option value="">-- PILIH BAJU --</option>
+                                <?php
+                                foreach($baju_view as $row)
+                                {
+                                  $selected = "";
+                                  if($row->baju_id == $masuk['baju_id'])
+                                    $selected = 'selected="selected"';
+
+                                  echo "<option value='".$row->baju_id."' $selected> &nbsp; &nbsp;" .$row->motif_nama.' - '.$row->warna_nama.'</option>';
+                                }
+                                ?>
+                        </select>
+                    </div>
+                </div>
+
+                 <label class="form-label">SIZE</label>
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <select name="size_id" id="size_id" class="form-control show-tick" data-live-search="true">
+                            <option value=0>-- PILIH SIZE --</option>
+                                <?php
+                                foreach($size_view as $row)
+                                {
+                                  $selected = "";
+                                  if($row->size_id == $masuk['size_id'])
+                                    $selected = 'selected="selected"';
+
+                                  echo "<option value='".$row->size_id."' $selected> &nbsp; &nbsp;" .$row->size_nama.'</option>';
+                                }
+                                ?>
+                        </select>
+                    </div>
+                </div>
+
+
+                
+                <button class="btn btn-primary waves-effect" type="submit">Cari</button>
+
+            </div>
+            <?php echo form_close(); ?>
+        </div>
+    </div>
+
 
     <?php foreach($stok_view as $row){ ?>
 
@@ -35,57 +93,11 @@
 
 
     <?php } ?>
+</div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="card">
-            <div class="header">
-                <h2> <?= strtoupper($judul)?> </h2>
-            </div>
+<div class="row clearfix">
 
-            <div class="header">
-           <!--      <button type="button" class="btn btn-primary waves-effect" data-toggle="modal" data-target="#defaultModal">
-                    <i class="material-icons">add</i><span>Tambah</span>
-                </button> -->
+    
 
-                <!-- <a href="<?php //echo site_url('laporan/cetak_masuk_industri/' ); ?>" class="btn btn-danger waves-effect">
-                    <i class="material-icons">print</i>
-                    <span> Cetak </span>
-                </a> -->
-            </div>
-
-            <div class="body">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-                        <thead>
-                            <tr>
-                                <th>NO</th>
-                                <th>NAMA BAJU</th>
-                                <th>SIZE</th>
-                                
-                                <th>TOTAL BAJU</th>      
-                                <th>FOTO</th>      
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php $no=1; ?>
-
-                            <?php foreach($stok_view as $row){ ?>
-                            <tr>
-                                <td><?= $no++;?></td>
-                                <td><?= $row->motif ?> - <?= $row->warna ?></td>
-                                <td> <?= $row->size_id ?></td>
-                                <td><?= $row->total_saldo ?></td>
-                               
-                                
-                              <td><img width="100" height="75" src="<?php echo base_url('images/baju/');?><?= $row->baju_photo ?>"></td>
-                               
-                                         
-                            </tr>
-                             <?php } ?>          
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
